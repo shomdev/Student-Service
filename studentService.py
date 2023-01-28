@@ -48,6 +48,7 @@ def studentFetchId():
     else:print('this user not exist')
  else:print('retry')
  
-
+def updateStudentRecord():
+    pass
 
 
