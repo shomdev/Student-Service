@@ -28,7 +28,25 @@ def fineIdStudentDb(Id):
   b = cursor.fetchall()
   return(b)
 
+def udateStudentAge(inputTuple):
+  a = ('UPDATE student_db1 SET AGE = %s  WHERE ID = %s')
 
-if __name__ == '__main__':
- C = fineIdStudentDb(12)
- print(C)
+  cursor.execute(a,inputTuple)
+  mydb.commit()
+
+def udateStudentAddress(inputTuple):
+  a = ('UPDATE student_db1 SET ADDRESS = %s  WHERE ID = %s')
+
+  cursor.execute(a,inputTuple)
+  mydb.commit()
+
+def udateStudentSubject(inputTuple):
+  a = ('UPDATE student_db1 SET SUBJECT = %s  WHERE ID = %s')
+
+  cursor.execute(a,inputTuple)
+  mydb.commit()
+
+
+#if __name__ == '__main__':
+# udateStudentSubject(["math:histori:english",6])
+
