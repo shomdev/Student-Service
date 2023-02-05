@@ -46,7 +46,12 @@ def udateStudentSubject(inputTuple):
   cursor.execute(a,inputTuple)
   mydb.commit()
 
+def deleteStudenRecord(ID):
+  a = ('DELETE FROM student_db1 WHERE ID = ' +str(ID))
 
-#if __name__ == '__main__':
-# udateStudentSubject(["math:histori:english",6])
+  cursor.execute(a)
+  mydb.commit()
+
+if __name__ == '__main__':
+  deleteStudenRecord(8)
 

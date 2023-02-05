@@ -9,7 +9,7 @@ studentService.updateStudentRecord()
 
 studentService.studentFetchId()
 
-
+studentService.deleteSudentRecord()
 
 
 

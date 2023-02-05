@@ -88,9 +88,20 @@ def updateStudentRecord():
             print('Creat New Student')
     else:print('try again')
 
+def deleteSudentRecord():
+    print('Do you want to delete the student Record?')
+    a = str(input('YES OR NO:  '))
+    
 
+    if a == 'yes' or a == 'Yes' or a == 'YES':
+        studentid = int(input('ID:   '))
+        studentCount = dbutil.getStudetCount(studentid)
+        if studentCount == 1:        
+            dbutil.deleteStudenRecord(studentid)
+            print('Student Record Deleted')
+        else:print('Record Unavailable')
     
     
 
 if __name__ == '__main__':
-    updateStudentRecord()
+    deleteSudentRecord()
